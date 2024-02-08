@@ -67,6 +67,11 @@
     margin-top: 0px;
     font-size: 14px;
 }
+.profile-content__info {
+    display: flex;
+    margin-top: 0px;
+    font-size: 16px;
+}
 
 @media only screen and (min-width: 800px) {
 
@@ -101,6 +106,12 @@
         font-size: 12px;
         color: #5c6166;
         display: flex;
+    }
+    li{
+        list-style: square;
+        /* list-style: circle; */
+        /* list-style: disc; */
+        /* list-style: square; */
     }
 
 }
