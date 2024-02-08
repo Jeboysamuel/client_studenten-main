@@ -68,9 +68,92 @@
     font-size: 14px;
 }
 .profile-content__info {
+    display: block;
+    margin-top: 0px;
+    font-size: 16px;
+}
+li{
+    list-style: none;
+    /* list-style: circle; */
+    /* list-style: disc; */
+    /* list-style: square; */
+}
+
+.profile-content__skills {
+    display: block;
+    margin-top: 0px;
+    font-size: 16px;
+}
+.profile-content__skill {
     display: flex;
     margin-top: 0px;
     font-size: 16px;
+    justify-content: space-between;
+}
+.profile-content__skillrating {
+    display: flex;
+    margin-top: 0px;
+    font-size: 16px;
+    justify-content: space-around;
+}
+.checked {
+    color: orange;
+}
+.gdpr-consent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid gray;
+    border-radius: 15px 15px 15px 15px;
+    background-color: white;
+    font-family: Arial;
+
+}
+
+.gdpr-consent__description{
+    display: flex;
+    justify-content: center;
+}
+
+.gdpr-consent__choice{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.gdpr-consent__button--accept {
+    background-color: palegreen;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px transparent;
+}
+.gdpr-consent__button--reject {
+    background-color: palevioletred;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px transparent;
+}
+
+.gdpr-consent__button--accept:hover {
+    background-color: #c5e3c5;
+}
+.gdpr-consent__button--reject:hover {
+    background-color: #c5e3c5;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
 }
 
 @media only screen and (min-width: 800px) {
@@ -107,12 +190,7 @@
         color: #5c6166;
         display: flex;
     }
-    li{
-        list-style: square;
-        /* list-style: circle; */
-        /* list-style: disc; */
-        /* list-style: square; */
-    }
+
 
 }
 
