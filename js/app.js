@@ -1,5 +1,9 @@
 const form = document.querySelector("form");
+const name = document.getElementById("name");
 const email = document.getElementById("email");
+const number = document.getElementById("number");
+const subject = document.getElementById("subject");
+const message = document.getElementById("message");
 const emailError = document.querySelector("#email + span.error");
 
 email.addEventListener("input", (event) => {
@@ -17,14 +21,36 @@ email.addEventListener("input", (event) => {
     }
 });
 
-form.addEventListener("submit", (event) => {
+number.addEventListener("input", (event) => {
+
+    if (number.validity.patternMismatch) {
+        number.setCustomValidity("Voer een geldig emailadres in!");
+        number.reportValidity();
+    } else {
+        number.setCustomValidity("");
+    }
+});
+
+form.addEventListener("submit", async (event) => {
+    // Then we prevent the form from being sent by canceling the event
+    event.preventDefault();
+
     // if the email field is valid, we let the form submit
     if (!email.validity.valid) {
         // If it isn't, we display an appropriate error message
         showError();
-        // Then we prevent the form from being sent by canceling the event
-        event.preventDefault();
+        return;
     }
+
+    let response = await fetch('http://localhost:3000/form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({name: name.value, email: email.value, number: number.value, subject: subject.value, message: message.value})
+
+    });
+
+    let data = await response.json();
+    alert(JSON.stringify(data))
 
 });
 
