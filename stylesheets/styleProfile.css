@@ -39,6 +39,19 @@
 .profile-content__category--hidden-mobile {
     display: none;
 }
+.button_contact{
+
+    width: 100%;
+    font-weight: bold;
+    padding: 5px;
+    background-color:rgba(39, 140, 39, 0.96);
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+}
+.button_contact:hover{
+    background-color: #5c6166;
+}
 
 .profile-content__element {
     display: flex;
@@ -96,8 +109,11 @@ li{
     font-size: 16px;
     justify-content: space-around;
 }
+.unchecked{
+    color: white;
+}
 .checked {
-    color: orange;
+    color: rgba(39, 140, 39, 0.96);
 }
 .gdpr-consent {
     display: flex;
